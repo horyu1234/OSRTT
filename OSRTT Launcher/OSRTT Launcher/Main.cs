@@ -309,6 +309,7 @@ namespace OSRTT_Launcher
         public Main()
         {
             InitializeComponent();
+            
             UpdateMe();
             CultureInfo customCulture = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
             customCulture.NumberFormat.NumberDecimalSeparator = ".";
@@ -880,7 +881,7 @@ namespace OSRTT_Launcher
             bool check = false;
             if (state == 1)
             {
-                text = "Device Connected";
+                text = "장치 연결됨";
                 bg = Color.White;
                 check = true;
                 active = true;
@@ -2547,9 +2548,9 @@ namespace OSRTT_Launcher
                         if (progressBarActive)
                         {
                             progressBar1.Location = new Point(0, 389);
-                            Size = new Size(679, 451);
+                            Size = new Size(800, 552);
                         }
-                        else { Size = new Size(679, 429); }
+                        else { Size = new Size(800, 530); }
                         break;
                     case "brightness":
                         if (progressBarActive)
@@ -2568,7 +2569,7 @@ namespace OSRTT_Launcher
                         mainPanel.Location = new Point(2, 29);
                         brightnessPanel.Location = new Point(1100, 36);
                         aboutPanel.Location = new Point(10, 412);
-                        Size = new Size(679, 429);
+                        Size = new Size(800, 530);
                         debugPanel.Location = new Point(619, 30);
                         menuStrip1.Visible = true;
                         overdriveModes1.Location = new Point(10, 559);
@@ -2578,10 +2579,10 @@ namespace OSRTT_Launcher
                         if (progressBarActive)
                         {
                             progressBar1.Location = new Point(0, 508);
-                            Size = new Size(679, 569);
+                            Size = new Size(800, 569);
                         }
                         else
-                        { Size = new Size(679, 547); }
+                        { Size = new Size(800, 547); }
                         break;
                     case "debug":
                         Size = new Size(1089, 436);
@@ -2596,7 +2597,7 @@ namespace OSRTT_Launcher
                         mainPanel.Location = new Point(1500, 26);
                         brightnessPanel.Location = new Point(0, 0);
                         aboutPanel.Location = new Point(1500, 402);
-                        Size = new Size(525, 280);
+                        Size = new Size(700, 400);
                         debugPanel.Location = new Point(1500, 30);
                         menuStrip1.Visible = false;
                         overdriveModes1.Location = new Point(0, 0);
@@ -2617,7 +2618,7 @@ namespace OSRTT_Launcher
                         Size = s2;
                         break;
                     default:
-                        Size = new Size(679, 429);
+                        Size = new Size(800, 530);
                         break;
                 }
             }
@@ -2891,7 +2892,6 @@ namespace OSRTT_Launcher
             }
             catch (Exception procEx)
             {
-                Console.WriteLine(procEx);
                 processingFailed = true;
                 if (port != null)
                 {

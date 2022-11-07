@@ -155,7 +155,7 @@ namespace OSRTT_Launcher
             this.Icon = (Icon)rm.GetObject("osrttIcon");
             path = new Uri(System.IO.Path.GetDirectoryName(path)).LocalPath;
             path += @"\Results";
-            Size = new Size(1100, 500);
+            Size = new Size(1300, 500);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             saveHeatmapsToolStripMenuItem.Visible = false;
             viewToolStripMenuItem.Visible = false;
@@ -577,7 +577,7 @@ namespace OSRTT_Launcher
         private void stdResultsMenuBtn_Click(object sender, EventArgs e)
         {
             BackColor = Color.White;
-            Size = new Size(1800, 1050);
+            Size = new Size(2200, 1050);
             saveHeatmapsToolStripMenuItem.Visible = true;
             importPanel.Location = new Point(1500, 52);
             graphViewPanel.Location = new Point(1439, 762);

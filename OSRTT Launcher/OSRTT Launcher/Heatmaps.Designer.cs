@@ -29,6 +29,7 @@ namespace OSRTT_Launcher
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,8 +38,8 @@ namespace OSRTT_Launcher
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.standardResultsPanel = new System.Windows.Forms.Panel();
+            this.notesGridView = new System.Windows.Forms.DataGridView();
             this.runSettingsView = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -84,8 +85,8 @@ namespace OSRTT_Launcher
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.notesGridView = new System.Windows.Forms.DataGridView();
             this.standardResultsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.runSettingsView)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -107,7 +108,6 @@ namespace OSRTT_Launcher
             ((System.ComponentModel.ISupportInitialize)(this.vrrGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.osGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rtGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // standardResultsPanel
@@ -139,9 +139,49 @@ namespace OSRTT_Launcher
             this.standardResultsPanel.Controls.Add(this.label10);
             this.standardResultsPanel.Controls.Add(this.label9);
             this.standardResultsPanel.Location = new System.Drawing.Point(0, 0);
+            this.standardResultsPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.standardResultsPanel.Name = "standardResultsPanel";
-            this.standardResultsPanel.Size = new System.Drawing.Size(1775, 950);
+            this.standardResultsPanel.Size = new System.Drawing.Size(2958, 1315);
             this.standardResultsPanel.TabIndex = 3;
+            // 
+            // notesGridView
+            // 
+            this.notesGridView.AllowUserToAddRows = false;
+            this.notesGridView.AllowUserToDeleteRows = false;
+            this.notesGridView.AllowUserToResizeColumns = false;
+            this.notesGridView.AllowUserToResizeRows = false;
+            this.notesGridView.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.notesGridView.ColumnHeadersHeight = 40;
+            this.notesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.notesGridView.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.notesGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.notesGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.notesGridView.EnableHeadersVisualStyles = false;
+            this.notesGridView.GridColor = System.Drawing.Color.White;
+            this.notesGridView.Location = new System.Drawing.Point(2042, 965);
+            this.notesGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.notesGridView.MultiSelect = false;
+            this.notesGridView.Name = "notesGridView";
+            this.notesGridView.ReadOnly = true;
+            this.notesGridView.RowHeadersVisible = false;
+            this.notesGridView.RowHeadersWidth = 65;
+            this.notesGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.notesGridView.RowTemplate.Height = 35;
+            this.notesGridView.RowTemplate.ReadOnly = true;
+            this.notesGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.notesGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.notesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.notesGridView.ShowCellToolTips = false;
+            this.notesGridView.ShowEditingIcon = false;
+            this.notesGridView.Size = new System.Drawing.Size(750, 145);
+            this.notesGridView.TabIndex = 42;
             // 
             // runSettingsView
             // 
@@ -164,7 +204,8 @@ namespace OSRTT_Launcher
             this.runSettingsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.runSettingsView.EnableHeadersVisualStyles = false;
             this.runSettingsView.GridColor = System.Drawing.Color.White;
-            this.runSettingsView.Location = new System.Drawing.Point(636, 603);
+            this.runSettingsView.Location = new System.Drawing.Point(1060, 865);
+            this.runSettingsView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.runSettingsView.MultiSelect = false;
             this.runSettingsView.Name = "runSettingsView";
             this.runSettingsView.ReadOnly = true;
@@ -178,7 +219,7 @@ namespace OSRTT_Launcher
             this.runSettingsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.runSettingsView.ShowCellToolTips = false;
             this.runSettingsView.ShowEditingIcon = false;
-            this.runSettingsView.Size = new System.Drawing.Size(450, 105);
+            this.runSettingsView.Size = new System.Drawing.Size(750, 174);
             this.runSettingsView.TabIndex = 41;
             // 
             // panel5
@@ -188,18 +229,20 @@ namespace OSRTT_Launcher
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(1258, 816);
+            this.panel5.Location = new System.Drawing.Point(2097, 1130);
+            this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 66);
+            this.panel5.Size = new System.Drawing.Size(333, 91);
             this.panel5.TabIndex = 40;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(186)))), ((int)(((byte)(92)))));
             this.panel6.Controls.Add(this.vrrGreenLbl);
-            this.panel6.Location = new System.Drawing.Point(133, 32);
+            this.panel6.Location = new System.Drawing.Point(222, 44);
+            this.panel6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(67, 34);
+            this.panel6.Size = new System.Drawing.Size(112, 47);
             this.panel6.TabIndex = 3;
             // 
             // vrrGreenLbl
@@ -207,8 +250,9 @@ namespace OSRTT_Launcher
             this.vrrGreenLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vrrGreenLbl.ForeColor = System.Drawing.Color.White;
             this.vrrGreenLbl.Location = new System.Drawing.Point(0, 1);
+            this.vrrGreenLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.vrrGreenLbl.Name = "vrrGreenLbl";
-            this.vrrGreenLbl.Size = new System.Drawing.Size(67, 33);
+            this.vrrGreenLbl.Size = new System.Drawing.Size(112, 46);
             this.vrrGreenLbl.TabIndex = 2;
             this.vrrGreenLbl.Text = "95";
             this.vrrGreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,9 +261,10 @@ namespace OSRTT_Launcher
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(183)))), ((int)(((byte)(98)))));
             this.panel7.Controls.Add(this.vrrOrangeLbl);
-            this.panel7.Location = new System.Drawing.Point(66, 32);
+            this.panel7.Location = new System.Drawing.Point(110, 44);
+            this.panel7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(67, 34);
+            this.panel7.Size = new System.Drawing.Size(112, 47);
             this.panel7.TabIndex = 2;
             // 
             // vrrOrangeLbl
@@ -227,8 +272,9 @@ namespace OSRTT_Launcher
             this.vrrOrangeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vrrOrangeLbl.ForeColor = System.Drawing.Color.White;
             this.vrrOrangeLbl.Location = new System.Drawing.Point(0, 1);
+            this.vrrOrangeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.vrrOrangeLbl.Name = "vrrOrangeLbl";
-            this.vrrOrangeLbl.Size = new System.Drawing.Size(67, 33);
+            this.vrrOrangeLbl.Size = new System.Drawing.Size(112, 46);
             this.vrrOrangeLbl.TabIndex = 2;
             this.vrrOrangeLbl.Text = "85";
             this.vrrOrangeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,9 +283,10 @@ namespace OSRTT_Launcher
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(73)))), ((int)(((byte)(70)))));
             this.panel8.Controls.Add(this.vrrRedLbl);
-            this.panel8.Location = new System.Drawing.Point(-1, 32);
+            this.panel8.Location = new System.Drawing.Point(-2, 44);
+            this.panel8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(67, 34);
+            this.panel8.Size = new System.Drawing.Size(112, 47);
             this.panel8.TabIndex = 1;
             // 
             // vrrRedLbl
@@ -247,8 +294,9 @@ namespace OSRTT_Launcher
             this.vrrRedLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vrrRedLbl.ForeColor = System.Drawing.Color.White;
             this.vrrRedLbl.Location = new System.Drawing.Point(0, 0);
+            this.vrrRedLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.vrrRedLbl.Name = "vrrRedLbl";
-            this.vrrRedLbl.Size = new System.Drawing.Size(67, 33);
+            this.vrrRedLbl.Size = new System.Drawing.Size(112, 46);
             this.vrrRedLbl.TabIndex = 1;
             this.vrrRedLbl.Text = "75";
             this.vrrRedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,8 +306,9 @@ namespace OSRTT_Launcher
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(0, 1);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(201, 27);
+            this.label11.Size = new System.Drawing.Size(291, 39);
             this.label11.TabIndex = 0;
             this.label11.Text = "Response Rating Key";
             // 
@@ -270,18 +319,20 @@ namespace OSRTT_Launcher
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(951, 818);
+            this.panel1.Location = new System.Drawing.Point(1585, 1133);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 66);
+            this.panel1.Size = new System.Drawing.Size(333, 91);
             this.panel1.TabIndex = 40;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(186)))), ((int)(((byte)(92)))));
             this.panel2.Controls.Add(this.osGreenLbl);
-            this.panel2.Location = new System.Drawing.Point(133, 32);
+            this.panel2.Location = new System.Drawing.Point(222, 44);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(67, 34);
+            this.panel2.Size = new System.Drawing.Size(112, 47);
             this.panel2.TabIndex = 3;
             // 
             // osGreenLbl
@@ -289,8 +340,9 @@ namespace OSRTT_Launcher
             this.osGreenLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.osGreenLbl.ForeColor = System.Drawing.Color.White;
             this.osGreenLbl.Location = new System.Drawing.Point(0, 1);
+            this.osGreenLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.osGreenLbl.Name = "osGreenLbl";
-            this.osGreenLbl.Size = new System.Drawing.Size(67, 33);
+            this.osGreenLbl.Size = new System.Drawing.Size(112, 46);
             this.osGreenLbl.TabIndex = 2;
             this.osGreenLbl.Text = "5";
             this.osGreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,9 +351,10 @@ namespace OSRTT_Launcher
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(183)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.osOrangeLbl);
-            this.panel3.Location = new System.Drawing.Point(66, 32);
+            this.panel3.Location = new System.Drawing.Point(110, 44);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(67, 34);
+            this.panel3.Size = new System.Drawing.Size(112, 47);
             this.panel3.TabIndex = 2;
             // 
             // osOrangeLbl
@@ -309,8 +362,9 @@ namespace OSRTT_Launcher
             this.osOrangeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.osOrangeLbl.ForeColor = System.Drawing.Color.White;
             this.osOrangeLbl.Location = new System.Drawing.Point(0, 1);
+            this.osOrangeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.osOrangeLbl.Name = "osOrangeLbl";
-            this.osOrangeLbl.Size = new System.Drawing.Size(67, 33);
+            this.osOrangeLbl.Size = new System.Drawing.Size(112, 46);
             this.osOrangeLbl.TabIndex = 2;
             this.osOrangeLbl.Text = "10";
             this.osOrangeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,9 +373,10 @@ namespace OSRTT_Launcher
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(73)))), ((int)(((byte)(70)))));
             this.panel4.Controls.Add(this.osRedLbl);
-            this.panel4.Location = new System.Drawing.Point(-1, 32);
+            this.panel4.Location = new System.Drawing.Point(-2, 44);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(67, 34);
+            this.panel4.Size = new System.Drawing.Size(112, 47);
             this.panel4.TabIndex = 1;
             // 
             // osRedLbl
@@ -329,8 +384,9 @@ namespace OSRTT_Launcher
             this.osRedLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.osRedLbl.ForeColor = System.Drawing.Color.White;
             this.osRedLbl.Location = new System.Drawing.Point(0, 0);
+            this.osRedLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.osRedLbl.Name = "osRedLbl";
-            this.osRedLbl.Size = new System.Drawing.Size(67, 33);
+            this.osRedLbl.Size = new System.Drawing.Size(112, 46);
             this.osRedLbl.TabIndex = 1;
             this.osRedLbl.Text = "15";
             this.osRedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -339,9 +395,10 @@ namespace OSRTT_Launcher
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 1);
+            this.label5.Location = new System.Drawing.Point(45, 1);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 27);
+            this.label5.Size = new System.Drawing.Size(211, 39);
             this.label5.TabIndex = 0;
             this.label5.Text = "Overshoot Key";
             // 
@@ -352,18 +409,20 @@ namespace OSRTT_Launcher
             this.rtKeyPanel.Controls.Add(this.rtOrange);
             this.rtKeyPanel.Controls.Add(this.rtRed);
             this.rtKeyPanel.Controls.Add(this.label1);
-            this.rtKeyPanel.Location = new System.Drawing.Point(636, 817);
+            this.rtKeyPanel.Location = new System.Drawing.Point(1060, 1131);
+            this.rtKeyPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtKeyPanel.Name = "rtKeyPanel";
-            this.rtKeyPanel.Size = new System.Drawing.Size(200, 66);
+            this.rtKeyPanel.Size = new System.Drawing.Size(333, 91);
             this.rtKeyPanel.TabIndex = 39;
             // 
             // rtGreen
             // 
             this.rtGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(186)))), ((int)(((byte)(92)))));
             this.rtGreen.Controls.Add(this.rtGreenLbl);
-            this.rtGreen.Location = new System.Drawing.Point(133, 32);
+            this.rtGreen.Location = new System.Drawing.Point(222, 44);
+            this.rtGreen.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtGreen.Name = "rtGreen";
-            this.rtGreen.Size = new System.Drawing.Size(67, 34);
+            this.rtGreen.Size = new System.Drawing.Size(112, 47);
             this.rtGreen.TabIndex = 3;
             // 
             // rtGreenLbl
@@ -371,8 +430,9 @@ namespace OSRTT_Launcher
             this.rtGreenLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtGreenLbl.ForeColor = System.Drawing.Color.White;
             this.rtGreenLbl.Location = new System.Drawing.Point(0, 1);
+            this.rtGreenLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rtGreenLbl.Name = "rtGreenLbl";
-            this.rtGreenLbl.Size = new System.Drawing.Size(67, 33);
+            this.rtGreenLbl.Size = new System.Drawing.Size(112, 46);
             this.rtGreenLbl.TabIndex = 2;
             this.rtGreenLbl.Text = "1";
             this.rtGreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -381,9 +441,10 @@ namespace OSRTT_Launcher
             // 
             this.rtOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(183)))), ((int)(((byte)(98)))));
             this.rtOrange.Controls.Add(this.rtOrangeLbl);
-            this.rtOrange.Location = new System.Drawing.Point(66, 32);
+            this.rtOrange.Location = new System.Drawing.Point(110, 44);
+            this.rtOrange.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtOrange.Name = "rtOrange";
-            this.rtOrange.Size = new System.Drawing.Size(67, 34);
+            this.rtOrange.Size = new System.Drawing.Size(112, 47);
             this.rtOrange.TabIndex = 2;
             // 
             // rtOrangeLbl
@@ -391,8 +452,9 @@ namespace OSRTT_Launcher
             this.rtOrangeLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtOrangeLbl.ForeColor = System.Drawing.Color.White;
             this.rtOrangeLbl.Location = new System.Drawing.Point(0, 1);
+            this.rtOrangeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rtOrangeLbl.Name = "rtOrangeLbl";
-            this.rtOrangeLbl.Size = new System.Drawing.Size(67, 33);
+            this.rtOrangeLbl.Size = new System.Drawing.Size(112, 46);
             this.rtOrangeLbl.TabIndex = 2;
             this.rtOrangeLbl.Text = "5";
             this.rtOrangeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -401,9 +463,10 @@ namespace OSRTT_Launcher
             // 
             this.rtRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(73)))), ((int)(((byte)(70)))));
             this.rtRed.Controls.Add(this.rtRedLbl);
-            this.rtRed.Location = new System.Drawing.Point(-1, 32);
+            this.rtRed.Location = new System.Drawing.Point(-2, 44);
+            this.rtRed.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtRed.Name = "rtRed";
-            this.rtRed.Size = new System.Drawing.Size(67, 34);
+            this.rtRed.Size = new System.Drawing.Size(112, 47);
             this.rtRed.TabIndex = 1;
             // 
             // rtRedLbl
@@ -411,8 +474,9 @@ namespace OSRTT_Launcher
             this.rtRedLbl.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtRedLbl.ForeColor = System.Drawing.Color.White;
             this.rtRedLbl.Location = new System.Drawing.Point(0, 0);
+            this.rtRedLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rtRedLbl.Name = "rtRedLbl";
-            this.rtRedLbl.Size = new System.Drawing.Size(67, 33);
+            this.rtRedLbl.Size = new System.Drawing.Size(112, 46);
             this.rtRedLbl.TabIndex = 1;
             this.rtRedLbl.Text = "10";
             this.rtRedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,9 +485,10 @@ namespace OSRTT_Launcher
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 1);
+            this.label1.Location = new System.Drawing.Point(10, 1);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 27);
+            this.label1.Size = new System.Drawing.Size(272, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Response Time Key";
             // 
@@ -448,7 +513,8 @@ namespace OSRTT_Launcher
             this.rtStatsRefreshGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.rtStatsRefreshGridView.EnableHeadersVisualStyles = false;
             this.rtStatsRefreshGridView.GridColor = System.Drawing.Color.White;
-            this.rtStatsRefreshGridView.Location = new System.Drawing.Point(57, 462);
+            this.rtStatsRefreshGridView.Location = new System.Drawing.Point(95, 640);
+            this.rtStatsRefreshGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtStatsRefreshGridView.MultiSelect = false;
             this.rtStatsRefreshGridView.Name = "rtStatsRefreshGridView";
             this.rtStatsRefreshGridView.ReadOnly = true;
@@ -462,16 +528,17 @@ namespace OSRTT_Launcher
             this.rtStatsRefreshGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.rtStatsRefreshGridView.ShowCellToolTips = false;
             this.rtStatsRefreshGridView.ShowEditingIcon = false;
-            this.rtStatsRefreshGridView.Size = new System.Drawing.Size(450, 105);
+            this.rtStatsRefreshGridView.Size = new System.Drawing.Size(750, 187);
             this.rtStatsRefreshGridView.TabIndex = 38;
             // 
             // vrrSubTitle
             // 
             this.vrrSubTitle.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vrrSubTitle.ForeColor = System.Drawing.Color.Black;
-            this.vrrSubTitle.Location = new System.Drawing.Point(1264, 69);
+            this.vrrSubTitle.Location = new System.Drawing.Point(2107, 96);
+            this.vrrSubTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.vrrSubTitle.Name = "vrrSubTitle";
-            this.vrrSubTitle.Size = new System.Drawing.Size(377, 28);
+            this.vrrSubTitle.Size = new System.Drawing.Size(628, 39);
             this.vrrSubTitle.TabIndex = 37;
             this.vrrSubTitle.Text = "Score out of 100 on visible performance";
             this.vrrSubTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -480,9 +547,10 @@ namespace OSRTT_Launcher
             // 
             this.vrrTitle.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vrrTitle.ForeColor = System.Drawing.Color.Black;
-            this.vrrTitle.Location = new System.Drawing.Point(1264, 36);
+            this.vrrTitle.Location = new System.Drawing.Point(2107, 50);
+            this.vrrTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.vrrTitle.Name = "vrrTitle";
-            this.vrrTitle.Size = new System.Drawing.Size(377, 36);
+            this.vrrTitle.Size = new System.Drawing.Size(628, 50);
             this.vrrTitle.TabIndex = 36;
             this.vrrTitle.Text = "Visual Response Rating";
             this.vrrTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -491,9 +559,10 @@ namespace OSRTT_Launcher
             // 
             this.osSubTitle.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.osSubTitle.ForeColor = System.Drawing.Color.Black;
-            this.osSubTitle.Location = new System.Drawing.Point(676, 69);
+            this.osSubTitle.Location = new System.Drawing.Point(1127, 96);
+            this.osSubTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.osSubTitle.Name = "osSubTitle";
-            this.osSubTitle.Size = new System.Drawing.Size(377, 28);
+            this.osSubTitle.Size = new System.Drawing.Size(628, 39);
             this.osSubTitle.TabIndex = 35;
             this.osSubTitle.Text = "RGB Values above the target";
             this.osSubTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -502,9 +571,10 @@ namespace OSRTT_Launcher
             // 
             this.osTitle.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.osTitle.ForeColor = System.Drawing.Color.Black;
-            this.osTitle.Location = new System.Drawing.Point(676, 36);
+            this.osTitle.Location = new System.Drawing.Point(1127, 50);
+            this.osTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.osTitle.Name = "osTitle";
-            this.osTitle.Size = new System.Drawing.Size(377, 36);
+            this.osTitle.Size = new System.Drawing.Size(628, 50);
             this.osTitle.TabIndex = 34;
             this.osTitle.Text = "RGB Overshoot";
             this.osTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -513,9 +583,10 @@ namespace OSRTT_Launcher
             // 
             this.rtSubTitle.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtSubTitle.ForeColor = System.Drawing.Color.Black;
-            this.rtSubTitle.Location = new System.Drawing.Point(100, 69);
+            this.rtSubTitle.Location = new System.Drawing.Point(167, 96);
+            this.rtSubTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rtSubTitle.Name = "rtSubTitle";
-            this.rtSubTitle.Size = new System.Drawing.Size(377, 28);
+            this.rtSubTitle.Size = new System.Drawing.Size(628, 39);
             this.rtSubTitle.TabIndex = 33;
             this.rtSubTitle.Text = "Fixed RGB 5 Tolerance";
             this.rtSubTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -541,7 +612,8 @@ namespace OSRTT_Launcher
             this.vrrStatsGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.vrrStatsGridView.EnableHeadersVisualStyles = false;
             this.vrrStatsGridView.GridColor = System.Drawing.Color.White;
-            this.vrrStatsGridView.Location = new System.Drawing.Point(1225, 464);
+            this.vrrStatsGridView.Location = new System.Drawing.Point(2042, 642);
+            this.vrrStatsGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.vrrStatsGridView.MultiSelect = false;
             this.vrrStatsGridView.Name = "vrrStatsGridView";
             this.vrrStatsGridView.ReadOnly = true;
@@ -555,7 +627,7 @@ namespace OSRTT_Launcher
             this.vrrStatsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.vrrStatsGridView.ShowCellToolTips = false;
             this.vrrStatsGridView.ShowEditingIcon = false;
-            this.vrrStatsGridView.Size = new System.Drawing.Size(450, 173);
+            this.vrrStatsGridView.Size = new System.Drawing.Size(750, 285);
             this.vrrStatsGridView.TabIndex = 32;
             // 
             // osStatsGridView
@@ -579,7 +651,8 @@ namespace OSRTT_Launcher
             this.osStatsGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.osStatsGridView.EnableHeadersVisualStyles = false;
             this.osStatsGridView.GridColor = System.Drawing.Color.White;
-            this.osStatsGridView.Location = new System.Drawing.Point(636, 463);
+            this.osStatsGridView.Location = new System.Drawing.Point(1060, 641);
+            this.osStatsGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.osStatsGridView.MultiSelect = false;
             this.osStatsGridView.Name = "osStatsGridView";
             this.osStatsGridView.ReadOnly = true;
@@ -593,7 +666,7 @@ namespace OSRTT_Launcher
             this.osStatsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.osStatsGridView.ShowCellToolTips = false;
             this.osStatsGridView.ShowEditingIcon = false;
-            this.osStatsGridView.Size = new System.Drawing.Size(450, 105);
+            this.osStatsGridView.Size = new System.Drawing.Size(750, 186);
             this.osStatsGridView.TabIndex = 31;
             // 
             // rtStatsGridView
@@ -617,7 +690,8 @@ namespace OSRTT_Launcher
             this.rtStatsGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.rtStatsGridView.EnableHeadersVisualStyles = false;
             this.rtStatsGridView.GridColor = System.Drawing.Color.White;
-            this.rtStatsGridView.Location = new System.Drawing.Point(57, 603);
+            this.rtStatsGridView.Location = new System.Drawing.Point(95, 865);
+            this.rtStatsGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtStatsGridView.MultiSelect = false;
             this.rtStatsGridView.Name = "rtStatsGridView";
             this.rtStatsGridView.ReadOnly = true;
@@ -631,15 +705,16 @@ namespace OSRTT_Launcher
             this.rtStatsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.rtStatsGridView.ShowCellToolTips = false;
             this.rtStatsGridView.ShowEditingIcon = false;
-            this.rtStatsGridView.Size = new System.Drawing.Size(450, 280);
+            this.rtStatsGridView.Size = new System.Drawing.Size(750, 446);
             this.rtStatsGridView.TabIndex = 30;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::OSRTT_Launcher.Properties.Resources.icon_wide;
-            this.pictureBox1.Location = new System.Drawing.Point(1587, 791);
+            this.pictureBox1.Location = new System.Drawing.Point(2643, 1174);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(272, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -648,9 +723,10 @@ namespace OSRTT_Launcher
             // 
             this.rtTitle.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtTitle.ForeColor = System.Drawing.Color.Black;
-            this.rtTitle.Location = new System.Drawing.Point(100, 36);
+            this.rtTitle.Location = new System.Drawing.Point(167, 50);
+            this.rtTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rtTitle.Name = "rtTitle";
-            this.rtTitle.Size = new System.Drawing.Size(377, 36);
+            this.rtTitle.Size = new System.Drawing.Size(628, 50);
             this.rtTitle.TabIndex = 28;
             this.rtTitle.Text = "Perceived Response Time";
             this.rtTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -676,7 +752,8 @@ namespace OSRTT_Launcher
             this.vrrGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.vrrGridView.EnableHeadersVisualStyles = false;
             this.vrrGridView.GridColor = System.Drawing.Color.White;
-            this.vrrGridView.Location = new System.Drawing.Point(1186, 100);
+            this.vrrGridView.Location = new System.Drawing.Point(1977, 138);
+            this.vrrGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.vrrGridView.MultiSelect = false;
             this.vrrGridView.Name = "vrrGridView";
             this.vrrGridView.ReadOnly = true;
@@ -689,7 +766,7 @@ namespace OSRTT_Launcher
             this.vrrGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.vrrGridView.ShowCellToolTips = false;
             this.vrrGridView.ShowEditingIcon = false;
-            this.vrrGridView.Size = new System.Drawing.Size(525, 290);
+            this.vrrGridView.Size = new System.Drawing.Size(875, 443);
             this.vrrGridView.TabIndex = 9;
             // 
             // osGridView
@@ -715,7 +792,8 @@ namespace OSRTT_Launcher
             this.osGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.osGridView.EnableHeadersVisualStyles = false;
             this.osGridView.GridColor = System.Drawing.Color.White;
-            this.osGridView.Location = new System.Drawing.Point(603, 100);
+            this.osGridView.Location = new System.Drawing.Point(1005, 138);
+            this.osGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.osGridView.MultiSelect = false;
             this.osGridView.Name = "osGridView";
             this.osGridView.ReadOnly = true;
@@ -730,7 +808,7 @@ namespace OSRTT_Launcher
             this.osGridView.ShowCellErrors = false;
             this.osGridView.ShowCellToolTips = false;
             this.osGridView.ShowEditingIcon = false;
-            this.osGridView.Size = new System.Drawing.Size(525, 290);
+            this.osGridView.Size = new System.Drawing.Size(875, 443);
             this.osGridView.TabIndex = 8;
             // 
             // rtGridView
@@ -754,7 +832,8 @@ namespace OSRTT_Launcher
             this.rtGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.rtGridView.EnableHeadersVisualStyles = false;
             this.rtGridView.GridColor = System.Drawing.Color.White;
-            this.rtGridView.Location = new System.Drawing.Point(26, 100);
+            this.rtGridView.Location = new System.Drawing.Point(43, 138);
+            this.rtGridView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rtGridView.MultiSelect = false;
             this.rtGridView.Name = "rtGridView";
             this.rtGridView.ReadOnly = true;
@@ -768,7 +847,7 @@ namespace OSRTT_Launcher
             this.rtGridView.ShowCellErrors = false;
             this.rtGridView.ShowCellToolTips = false;
             this.rtGridView.ShowEditingIcon = false;
-            this.rtGridView.Size = new System.Drawing.Size(525, 290);
+            this.rtGridView.Size = new System.Drawing.Size(875, 443);
             this.rtGridView.TabIndex = 7;
             // 
             // from2
@@ -777,9 +856,10 @@ namespace OSRTT_Launcher
             this.from2.BackColor = System.Drawing.Color.Transparent;
             this.from2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.from2.ForeColor = System.Drawing.Color.Black;
-            this.from2.Location = new System.Drawing.Point(605, 393);
+            this.from2.Location = new System.Drawing.Point(998, 585);
+            this.from2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.from2.Name = "from2";
-            this.from2.Size = new System.Drawing.Size(67, 26);
+            this.from2.Size = new System.Drawing.Size(97, 37);
             this.from2.TabIndex = 24;
             this.from2.Text = "From";
             // 
@@ -789,9 +869,10 @@ namespace OSRTT_Launcher
             this.from3.BackColor = System.Drawing.Color.Transparent;
             this.from3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.from3.ForeColor = System.Drawing.Color.Black;
-            this.from3.Location = new System.Drawing.Point(1189, 393);
+            this.from3.Location = new System.Drawing.Point(1982, 585);
+            this.from3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.from3.Name = "from3";
-            this.from3.Size = new System.Drawing.Size(67, 26);
+            this.from3.Size = new System.Drawing.Size(97, 37);
             this.from3.TabIndex = 26;
             this.from3.Text = "From";
             // 
@@ -801,9 +882,10 @@ namespace OSRTT_Launcher
             this.from1.BackColor = System.Drawing.Color.Transparent;
             this.from1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.from1.ForeColor = System.Drawing.Color.Black;
-            this.from1.Location = new System.Drawing.Point(28, 393);
+            this.from1.Location = new System.Drawing.Point(36, 585);
+            this.from1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.from1.Name = "from1";
-            this.from1.Size = new System.Drawing.Size(67, 26);
+            this.from1.Size = new System.Drawing.Size(97, 37);
             this.from1.TabIndex = 22;
             this.from1.Text = "From";
             // 
@@ -813,9 +895,10 @@ namespace OSRTT_Launcher
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(1715, 106);
+            this.label12.Location = new System.Drawing.Point(2858, 147);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 26);
+            this.label12.Size = new System.Drawing.Size(57, 37);
             this.label12.TabIndex = 27;
             this.label12.Text = "To";
             // 
@@ -825,9 +908,10 @@ namespace OSRTT_Launcher
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(1129, 106);
+            this.label10.Location = new System.Drawing.Point(1882, 147);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 26);
+            this.label10.Size = new System.Drawing.Size(57, 37);
             this.label10.TabIndex = 25;
             this.label10.Text = "To";
             // 
@@ -837,60 +921,25 @@ namespace OSRTT_Launcher
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(554, 106);
+            this.label9.Location = new System.Drawing.Point(923, 147);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 26);
+            this.label9.Size = new System.Drawing.Size(57, 37);
             this.label9.TabIndex = 23;
             this.label9.Text = "To";
             // 
-            // notesGridView
-            // 
-            this.notesGridView.AllowUserToAddRows = false;
-            this.notesGridView.AllowUserToDeleteRows = false;
-            this.notesGridView.AllowUserToResizeColumns = false;
-            this.notesGridView.AllowUserToResizeRows = false;
-            this.notesGridView.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
-            this.notesGridView.ColumnHeadersHeight = 40;
-            this.notesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.notesGridView.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.notesGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.notesGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.notesGridView.EnableHeadersVisualStyles = false;
-            this.notesGridView.GridColor = System.Drawing.Color.White;
-            this.notesGridView.Location = new System.Drawing.Point(1225, 675);
-            this.notesGridView.MultiSelect = false;
-            this.notesGridView.Name = "notesGridView";
-            this.notesGridView.ReadOnly = true;
-            this.notesGridView.RowHeadersVisible = false;
-            this.notesGridView.RowHeadersWidth = 65;
-            this.notesGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.notesGridView.RowTemplate.Height = 35;
-            this.notesGridView.RowTemplate.ReadOnly = true;
-            this.notesGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.notesGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.notesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.notesGridView.ShowCellToolTips = false;
-            this.notesGridView.ShowEditingIcon = false;
-            this.notesGridView.Size = new System.Drawing.Size(450, 105);
-            this.notesGridView.TabIndex = 42;
-            // 
             // Heatmaps
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.standardResultsPanel);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Heatmaps";
-            this.Size = new System.Drawing.Size(1775, 950);
+            this.Size = new System.Drawing.Size(2958, 1315);
             this.Load += new System.EventHandler(this.Heatmaps_Load);
             this.standardResultsPanel.ResumeLayout(false);
             this.standardResultsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notesGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.runSettingsView)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -915,7 +964,6 @@ namespace OSRTT_Launcher
             ((System.ComponentModel.ISupportInitialize)(this.vrrGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.osGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rtGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notesGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
